@@ -1,0 +1,24 @@
+{% extends "posts/base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 상세정보</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <table>
+            {% csrf_token %}
+            <h1>{{ post.title }}</h1><br>
+            <p>{{ post.writer }}</p><br>
+            <p>{{ post.created_at }}</p><br>
+            <p>{{ post.content }}</p><br>
+        </table>
+    </form>
+</body>
+</html>
+{% endblock %}
